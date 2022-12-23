@@ -29,7 +29,7 @@ def part1(input):
 
 if __name__ == "__main__":
     assert max(part1(example)) == 24000
-    with open("../data/1.txt") as f:
+    with open("../data/day01.txt") as f:
         res = part1(f.read())
         print(max(res))
         print(sum(list(sorted(res, reverse=True))[:3]))

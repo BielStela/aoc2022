@@ -13,6 +13,8 @@ fn main() {
             1 => aoc2022::day01::run,
             2 => aoc2022::day02::run,
             3 => aoc2022::day03::run,
+            4 => aoc2022::day04::run,
+            5 => aoc2022::day05::run,
             _ => unreachable!(),
         };
         day_func(input.trim_end())

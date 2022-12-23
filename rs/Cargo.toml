@@ -7,3 +7,5 @@ authors = ["Biel Stela <bstela@users.noreply.github.com"]
 
 [dependencies]
 itertools = "0.10"
+regex = "1.7.0"
+lazy_static = "1.4.0"

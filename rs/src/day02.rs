@@ -1,15 +1,17 @@
 use itertools::Itertools;
 
 fn parse_input(input: &str) -> Vec<(u8, u8)> {
-    let moves = input.lines()
-        .map(|line| line.split(' ')
-            .map(|code| code.bytes().next().unwrap())
-            .collect_vec()
-        )
+    let moves = input
+        .lines()
+        .map(|line| {
+            line.split(' ')
+                .map(|code| code.bytes().next().unwrap())
+                .collect_vec()
+        })
         // convert to ascii value and normalize between 0 and 2. 0: rock, 1: paper...
         .map(|v| (v[0] - b'A', v[1] - b'X'))
         .collect_vec();
-    return moves;
+    moves
 }
 
 fn play(input: &str, part1: bool) -> i32 {
